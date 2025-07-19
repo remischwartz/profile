@@ -1,0 +1,48 @@
+---
+import ContactLink from "../components/ContactLink.astro";
+import Navbar from "../components/Navbar.astro";
+import NavbarItem from "../components/NavbarItem.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Rémi Schwartz | Portfolio</title>
+  </head>
+  <body class="bg-background text-sand font-sans scroll-smooth">
+    <Navbar>
+      <NavbarItem content="Accueil" href="#top" />
+      <NavbarItem content="Compétences" href="#competences" />
+      <NavbarItem content="À propos" href="#about" />
+      <NavbarItem content="Projets" href="#projects" />
+      <ContactLink size="small" />
+    </Navbar>
+    <div class="md:text-lg">
+      <slot />
+    </div>
+    <script>
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            console.log(entries);
+            const id = entry.target.getAttribute("id");
+            const link = document.querySelector(`a[href='#${id}']`);
+            if (entry.isIntersecting) {
+              navLinks.forEach((el) => el.classList.remove("current-link"));
+              if (link) link.classList.add("current-link");
+            }
+          });
+        },
+        { rootMargin: "0px 0px -90% 0px" }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  </body>
+</html>

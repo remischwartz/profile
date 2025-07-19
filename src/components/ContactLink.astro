@@ -1,0 +1,9 @@
+---
+const { size = "medium" } = Astro.props;
+---
+
+<a
+  href="#mailto:schwartz.remi@gmail.com"
+  class=`self-center md:ml-auto bg-red-400 hover:bg-red-300 active:bg-red-200 text-background font-medium rounded-full ${size === "small" ? "text-sm md:text-base px-3 py-1" : "text-lg px-6 py-2"}`
+  >Me contacter</a
+>
