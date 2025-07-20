@@ -5,7 +5,9 @@
   mask: linear-gradient(
     to top,
     rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.05) 10%,
     rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 0.9) 45%,
     rgba(0, 0, 0, 1) 50%
   );
 }
@@ -14,14 +16,41 @@
   --font-sans: "Montserrat", sans-serif;
   --color-background: #1c1e22;
   --color-surface: #26292f;
-  --color-sand: #e5e1d4;
+  --color-sand-200: #e5e1d4;
+  --color-sand-500: #cfcbbf;
+  --color-sand-700: #b0ac9f;
+  --color-golden: #ffd45a;
+  --color-accent: #8d8dff;
+
+  /* Text color animation */
+  --animate-text-color: color-change 3s linear infinite;
+  --color1: #86e4ce;
+  --color2: #d0e6a4;
+  --color3: #fbdd95;
+  @keyframes color-change {
+    0% {
+      /* color: initial; */
+    }
+    25% {
+      color: var(--color1);
+    }
+    50% {
+      color: var(--color2);
+    }
+    75% {
+      color: var(--color3);
+    }
+    100% {
+      /* color: initial; */
+    }
+  }
 }
 
 h2 {
-  @apply text-2xl md:text-4xl font-semibold uppercase;
+  @apply text-2xl font-bold uppercase md:text-4xl;
 }
 h3 {
-  @apply text-lg md:text-2xl font-bold;
+  @apply text-lg font-bold md:text-2xl;
 }
 svg {
   width: 1em;
