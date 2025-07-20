@@ -3,12 +3,10 @@ import {
   PopoverButton,
   PopoverBackdrop,
   PopoverPanel,
-  PopoverGroup,
 } from "@headlessui/react";
 
 export const MobileNav = ({ children }: { children: React.ReactNode }) => {
   return (
-    // <PopoverGroup>
     <Popover className="relative md:hidden">
       <PopoverBackdrop className="fixed inset-x-0 top-12 bottom-0 z-30 bg-black/50" />
       <PopoverButton className="px-4 py-3 text-lg font-semibold">
@@ -24,6 +22,5 @@ export const MobileNav = ({ children }: { children: React.ReactNode }) => {
         {children}
       </PopoverPanel>
     </Popover>
-    // </PopoverGroup>
   );
 };
