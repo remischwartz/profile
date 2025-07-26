@@ -9,8 +9,8 @@ import LinkedInLogo from "/public/linkedin.svg";
 <BaseLayout>
   <Hero />
   <section id="competences" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
-    <h2 class="mb-4">Compétences</h2>
-    <ul class="list-disc list-inside space-y-2">
+    <h2 class="text-center">Compétences</h2>
+    <ul class="flex flex-col gap-4 mt-16 list-disc list-inside space-y-2">
       <li>
         <strong>Développement Frontend&nbsp;:</strong> React, Next.js, JavaScript
         (ES6+), TypeScript, HTML5, CSS/SCSS, Web Components
@@ -38,33 +38,41 @@ import LinkedInLogo from "/public/linkedin.svg";
   </section>
 
   <section id="about" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
-    <h2 class="mb-4">À propos</h2>
-    <p class="mb-4">
+    <h2 class="text-center">À propos</h2>
+    <p class="mt-16">
       Après une première carrière dans l’aéronautique, je me suis reconverti
       dans le développement web. Depuis 4 ans, je travaille comme développeur
-      frontend chez EY Fabernovel. Mon objectif : concevoir des interfaces
-      accessibles et maintenir des design systems fiables et cohérents. J’ai
-      mené des audits d’accessibilité, mais je préfère aujourd’hui construire
-      des solutions concrètes et inclusives, plutôt que simplement signaler les
-      problèmes.
+      frontend chez EY Fabernovel.
+    </p><p>
+      Mon objectif : concevoir des interfaces accessibles et maintenir des
+      design systems fiables et cohérents.
     </p>
   </section>
 
   <section id="projects" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
-    <h2 class="mb-4">Projets récents</h2>
-    <ul class="space-y-6">
-      <li>
-        <h3 class="font-bold">
-          Design System de l’Autonomie (2024 — aujourd’hui)
-        </h3>
-        <p>
-          Composants Web accessibles pour la CNSA, destinés aux personnes âgées
-          ou en situation de handicap. Respect des normes WCAG. <a
-            class="text-[#8D8DFF] underline"
-            href="https://dsa.service-public-autonomie.fr/latest/demarrer/design-system-de-l-autonomie/presentation-A6ygvnwd"
-            >Documentation publique</a
-          >
-        </p>
+    <h2 class="text-center">Projets récents</h2>
+    <ul class="mt-16 space-y-6">
+      <li class="flex gap-12 items-center">
+        <div
+          class="relative shrink-0 rounded-4xl hover:after:content-['Visiter'] hover:after:absolute hover:after:inset-0 hover:after:bg-black/50 hover:after:text-white hover:after:flex hover:after:items-center hover:after:justify-center hover:after:text-4xl"
+        >
+          <img
+            src=`${import.meta.env.BASE_URL}/DSA.png`
+            alt="Design System de l'Autonomie"
+            class="h-48 rounded-4xl"
+          />
+        </div>
+        <div>
+          <a href="#">
+            <h3 class="font-bold">
+              Design System de l’Autonomie (2024 — aujourd’hui)
+            </h3>
+          </a>
+          <p>
+            Composants Web accessibles pour la CNSA, destinés aux personnes
+            âgées ou en situation de handicap. Respect des normes WCAG.
+          </p>
+        </div>
       </li>
       <li>
         <h3 class="font-bold">NAOS – Skin Observer (2023)</h3>
