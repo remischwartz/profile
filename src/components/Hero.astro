@@ -1,11 +1,13 @@
 <section id="top" class="fade-in flex min-h-screen justify-center items-center">
   <div
-    class="group mt-16 px-4 py-8 md:p-16 text-center md:text-left fade-in flex flex-col md:flex-row-reverse gap-6 md:gap-8 justify-center md:items-center bg-surface shadow-xl md:mx-12 max-w-6xl md:rounded-4xl"
+    class="group mt-16 px-4 py-8 md:p-16 text-center md:text-left fade-in flex flex-col md:flex-row-reverse gap-6 md:gap-8 justify-center md:items-center md:bg-surface md:shadow-xl md:mx-12 max-w-6xl md:rounded-4xl"
   >
     <img
+      id="profile-pic"
       src=`${import.meta.env.BASE_URL}/photo_remi600px.jpeg`
       alt=""
-      class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto border-8 hover:animate-spin"
+      class="w-32 h-32 md:w-48 md:h-48 rounded-full mx-auto border-8 cursor-pointer"
+      draggable="false"
     />
     <div class="">
       <p class="text-xl md:text-3xl font-extralight">Rémi Schwartz</p>
@@ -30,3 +32,45 @@
     </div>
   </div>
 </section>
+
+<script>
+  document
+    .getElementById("profile-pic")!
+    .addEventListener("click", function (e) {
+      const container = this.parentElement!;
+      const rect = container.getBoundingClientRect();
+
+      const img = document.createElement("img");
+      img.src = "/profile/cookie.png";
+      img.className = "floating-img";
+      img.style.left = e.clientX - rect.left - 30 + "px";
+      img.style.top = e.clientY - rect.top - 30 + "px";
+      container.appendChild(img);
+
+      // Physics parameters
+      let x = 0;
+      let y = 0;
+      let vx = (Math.random() - 0.5) * 2; // horizontal drift
+      let vy = -4 - Math.random() * 2; // initial upward velocity
+      let gravity = 0.2;
+      let opacity = 1;
+
+      function animate() {
+        vy += gravity;
+        x += vx;
+        y += vy;
+        opacity -= 0.015;
+
+        img.style.transform = `translate(${x}px, ${y}px)`;
+        img.style.opacity = opacity.toString();
+
+        if (opacity > 0) {
+          requestAnimationFrame(animate);
+        } else {
+          img.remove();
+        }
+      }
+
+      requestAnimationFrame(animate);
+    });
+</script>

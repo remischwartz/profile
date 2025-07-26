@@ -1,6 +1,8 @@
 ---
 import ContactLink from "../components/ContactLink.astro";
 import Hero from "../components/Hero.astro";
+import PastProject from "../components/PastProject.astro";
+import ScreenPreview from "../components/ScreenPreview.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GithubLogo from "/public/github-mark.svg";
 import LinkedInLogo from "/public/linkedin.svg";
@@ -51,50 +53,37 @@ import LinkedInLogo from "/public/linkedin.svg";
 
   <section id="projects" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
     <h2 class="text-center">Projets récents</h2>
-    <ul class="mt-16 space-y-6">
-      <li class="flex gap-12 items-center">
-        <div
-          class="relative shrink-0 rounded-4xl hover:after:content-['Visiter'] hover:after:absolute hover:after:inset-0 hover:after:bg-black/50 hover:after:text-white hover:after:flex hover:after:items-center hover:after:justify-center hover:after:text-4xl"
-        >
-          <img
-            src=`${import.meta.env.BASE_URL}/DSA.png`
-            alt="Design System de l'Autonomie"
-            class="h-48 rounded-4xl"
-          />
-        </div>
-        <div>
-          <a href="#">
-            <h3 class="font-bold">
-              Design System de l’Autonomie (2024 — aujourd’hui)
-            </h3>
-          </a>
-          <p>
-            Composants Web accessibles pour la CNSA, destinés aux personnes
-            âgées ou en situation de handicap. Respect des normes WCAG.
-          </p>
-        </div>
-      </li>
-      <li>
-        <h3 class="font-bold">NAOS – Skin Observer (2023)</h3>
-        <p>
-          Outil d’analyse de peau intégré via iframe, avec design system
-          personnalisé. Stack : Next.js, TypeScript, Tailwind, Haut.AI.
-        </p>
-      </li>
-      <li>
-        <h3 class="font-bold">Flowee – Plateforme de travail hybride (2022)</h3>
-        <p>
-          Dashboard React pour la gestion du flex office. Utilisation de React
-          Aria pour améliorer l’accessibilité et l’expérience utilisateur.
-        </p>
-      </li>
-      <li>
-        <h3 class="font-bold">Site web de la Villa Albertine (2021)</h3>
-        <p>
-          Développement frontend du site culturel de l’ambassade de France aux
-          États-Unis. Stack : Next.js, TypeScript, Tailwind CSS.
-        </p>
-      </li>
+    <ul class="mt-16 space-y-6 flex flex-col gap-12">
+      <PastProject
+        title="Design System de l\'Autonomie (2024 — aujourd\'hui)"
+        description="Composants Web accessibles pour la CNSA, destinés aux personnes âgées ou en situation de handicap. Respect des normes WCAG."
+        url="https://dsa.service-public-autonomie.fr/"
+      >
+        <ScreenPreview filename="DSA" />
+      </PastProject>
+      <PastProject
+        title="NAOS – Skin Observer (2023)"
+        description="Outil d'analyse de peau intégré via iframe sur les sites des différentes marques de NAOS. Stack : Next.js, TypeScript, Tailwind, Haut.AI."
+        url="#"
+        imagePosition="right"
+      >
+        <ScreenPreview filename="SkinObserver" />
+      </PastProject>
+      <PastProject
+        title="Flowee – Plateforme de travail hybride (2022)"
+        description="Dashboard React pour la gestion du flex office. Utilisation de React Aria pour améliorer l’accessibilité et l’expérience utilisateur."
+        url="https://www.flowee.io/"
+      >
+        <ScreenPreview filename="Flowee" />
+      </PastProject>
+      <PastProject
+        title="Site web de la Villa Albertine (2021)"
+        description="Développement frontend du site culturel de l’ambassade de France aux États-Unis. Stack : Next.js, TypeScript, Tailwind CSS."
+        url="https://villa-albertine.org/fr/"
+        imagePosition="right"
+      >
+        <ScreenPreview filename="VillaAlbertine" />
+      </PastProject>
     </ul>
   </section>
 

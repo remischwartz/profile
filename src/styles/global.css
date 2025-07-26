@@ -73,3 +73,11 @@ svg {
 .current-link {
   @apply text-[#FFD45A] underline underline-offset-4;
 }
+
+.floating-img {
+  position: absolute;
+  width: 40px; /* Adjust as needed */
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+}

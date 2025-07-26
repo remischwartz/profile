@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  imagePosition?: "left" | "right";
+}
+
+const { title, description, url, imagePosition = "left" } = Astro.props;
+---
+
+<li
+  class=`flex flex-col ${imagePosition === "right"? "md:flex-row-reverse":"md:flex-row"} gap-8 md:gap-12 items-center group relative text-center md:text-start`
+>
+  <slot />
+  <div>
+    <a
+      href={url}
+      class="group-hover:underline text-accent after:content-[''] after:absolute after:inset-0"
+    >
+      <h3 class="font-bold">
+        {title}
+      </h3>
+    </a>
+    <p>
+      {description}
+    </p>
+  </div>
+</li>

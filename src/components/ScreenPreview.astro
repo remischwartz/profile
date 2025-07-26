@@ -1,0 +1,39 @@
+---
+interface Props {
+  filename: "SkinObserver" | "DSA" | "VillaAlbertine" | "Flowee";
+}
+
+const { filename } = Astro.props;
+let backgroundClass;
+let backgroundHoverClass;
+
+switch (filename) {
+  case "DSA":
+    backgroundClass = "bg-[url('/profile/DSA.png')]";
+    backgroundHoverClass =
+      "group-hover:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/profile/DSA.png')]";
+    break;
+  case "SkinObserver":
+    backgroundClass = "bg-[url('/profile/SkinObserver.png')]";
+    backgroundHoverClass =
+      "group-hover:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/profile/SkinObserver.png')]";
+    break;
+  case "Flowee":
+    backgroundClass = "bg-[url('/profile/Flowee.png')]";
+    backgroundHoverClass =
+      "group-hover:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/profile/Flowee.png')]";
+    break;
+  case "VillaAlbertine":
+    backgroundClass = "bg-[url('/profile/VillaAlbertine.png')]";
+    backgroundHoverClass =
+      "group-hover:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/profile/VillaAlbertine.png')]";
+    break;
+}
+---
+
+<div
+  class=`${backgroundClass} ${backgroundHoverClass} bg-cover w-1/3 min-w-60 min-h-40 flex justify-center items-center text-sand-200 font-bold rounded-sm text-[0px] transition-all duration-300 group-hover:text-2xl group-hover:scale-105`
+  aria-hidden="true"
+>
+  Visiter
+</div>
