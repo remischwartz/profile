@@ -57,6 +57,11 @@ svg {
   height: 1em;
 }
 
+a:focus-visible,
+button:focus-visible {
+  @apply outline-accent outline-2 outline-offset-2 outline-solid;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -80,4 +85,19 @@ svg {
   pointer-events: none;
   user-select: none;
   will-change: transform, opacity;
+}
+
+.mario-pipe {
+  position: fixed;
+  width: 100px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 10;
+}
+.mario-mushroom {
+  position: fixed;
+  width: 80px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 5;
 }

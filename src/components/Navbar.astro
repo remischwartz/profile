@@ -11,6 +11,7 @@ import { MobileNav } from "./MobileNav";
       <slot />
     </div>
   </div>
-  <div></div>
-  <MobileNav client:load><slot /> </MobileNav>
+  <div class="flex justify-end">
+    <MobileNav client:load><slot /> </MobileNav>
+  </div>
 </nav>

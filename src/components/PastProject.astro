@@ -16,7 +16,7 @@ const { title, description, url, imagePosition = "left" } = Astro.props;
   <div>
     <a
       href={url}
-      class="group-hover:underline text-accent after:content-[''] after:absolute after:inset-0"
+      class="inline-block group-hover:underline focus:underline focus:rounded-sm text-accent after:content-[''] after:absolute after:inset-0"
     >
       <h3 class="font-bold">
         {title}

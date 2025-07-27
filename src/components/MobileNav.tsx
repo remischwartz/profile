@@ -9,7 +9,7 @@ export const MobileNav = ({ children }: { children: React.ReactNode }) => {
   return (
     <Popover className="relative md:hidden">
       <PopoverBackdrop className="fixed inset-x-0 top-12 bottom-0 z-30 bg-black/50" />
-      <PopoverButton className="px-4 py-3 text-lg font-semibold">
+      <PopoverButton className="px-4 py-3 text-xl text-shadow-lg">
         Menu ☰
       </PopoverButton>
       <PopoverPanel

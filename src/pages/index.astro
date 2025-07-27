@@ -12,42 +12,43 @@ import LinkedInLogo from "/public/linkedin.svg";
   <Hero />
   <section id="competences" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
     <h2 class="text-center">Compétences</h2>
-    <ul class="flex flex-col gap-4 mt-16 list-disc list-inside space-y-2">
-      <li>
-        <strong>Développement Frontend&nbsp;:</strong> React, Next.js, JavaScript
-        (ES6+), TypeScript, HTML5, CSS/SCSS, Web Components
-      </li>
-      <li>
-        <strong>Accessibilité&nbsp;:</strong> Normes WCAG, ARIA, audit manuel et
-        automatisé (axe, Lighthouse), interfaces clavier
-      </li>
-      <li>
-        <strong>Design Systems&nbsp;:</strong> Storybook, tokens, architecture de
-        composants, documentation
-      </li>
-      <li>
-        <strong>Testing&nbsp;:</strong> Jest, React Testing Library, tests d’accessibilité
-      </li>
-      <li>
-        <strong>Outils&nbsp;:</strong> Git, Figma, Vercel, Netlify, Tailwind CSS,
-        CSS Modules
-      </li>
-      <li>
-        <strong>Langues&nbsp;:</strong> Français (natif), Anglais (courant), Japonais
-        (professionnel), Espagnol (notions)
-      </li>
-    </ul>
+    <dl class="text-center mt-16 space-y-2">
+      <dt class="font-bold mt-12">Développement Frontend</dt>
+      <dd>
+        React, Next.js, JavaScript (ES6+), Astro, TypeScript, HTML5, CSS/SCSS,
+        Web Components
+      </dd>
+
+      <dt class="font-bold mt-12">Accessibilité</dt>
+      <dd>RGAA, WCAG, ARIA, audit, lecteurs d'écran</dd>
+
+      <dt class="font-bold mt-12">Design Systems</dt>
+      <dd>Storybook, tokens, architecture de composants, documentation</dd>
+
+      <dt class="font-bold mt-12">Testing</dt>
+      <dd>Jest, React Testing Library, tests d'accessibilité</dd>
+
+      <dt class="font-bold mt-12">Outils</dt>
+      <dd>Git, Figma, Vercel, Tailwind CSS</dd>
+
+      <dt class="font-bold mt-12">Langues</dt>
+      <dd>
+        Français (natif), Anglais (courant), Japonais (professionnel), Espagnol
+        (notions)
+      </dd>
+    </dl>
   </section>
 
   <section id="about" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
     <h2 class="text-center">À propos</h2>
-    <p class="mt-16">
-      Après une première carrière dans l’aéronautique, je me suis reconverti
+    <p class="text-center mt-16">
+      Après une première carrière dans l'aéronautique, je me suis reconverti
       dans le développement web. Depuis 4 ans, je travaille comme développeur
       frontend chez EY Fabernovel.
-    </p><p>
-      Mon objectif : concevoir des interfaces accessibles et maintenir des
-      design systems fiables et cohérents.
+    </p>
+    <p class="text-center mt-4">
+      <span class="font-bold">Mon objectif : </span>concevoir des interfaces
+      accessibles et maintenir des design systems fiables et cohérents.
     </p>
   </section>
 
@@ -56,7 +57,7 @@ import LinkedInLogo from "/public/linkedin.svg";
     <ul class="mt-16 space-y-6 flex flex-col gap-12">
       <PastProject
         title="Design System de l\'Autonomie (2024 — aujourd\'hui)"
-        description="Composants Web accessibles pour la CNSA, destinés aux personnes âgées ou en situation de handicap. Respect des normes WCAG."
+        description="Composants Web accessibles pour la CNSA, destinés aux personnes âgées ou en situation de handicap. Respect des normes WCAG et RGAA."
         url="https://dsa.service-public-autonomie.fr/"
       >
         <ScreenPreview filename="DSA" />
@@ -71,14 +72,14 @@ import LinkedInLogo from "/public/linkedin.svg";
       </PastProject>
       <PastProject
         title="Flowee – Plateforme de travail hybride (2022)"
-        description="Dashboard React pour la gestion du flex office. Utilisation de React Aria pour améliorer l’accessibilité et l’expérience utilisateur."
+        description="Dashboard React pour la gestion du flex office. Utilisation de React Aria pour améliorer l'accessibilité et l'expérience utilisateur."
         url="https://www.flowee.io/"
       >
         <ScreenPreview filename="Flowee" />
       </PastProject>
       <PastProject
         title="Site web de la Villa Albertine (2021)"
-        description="Développement frontend du site culturel de l’ambassade de France aux États-Unis. Stack : Next.js, TypeScript, Tailwind CSS."
+        description="Développement frontend du site culturel de l'ambassade de France aux États-Unis. Stack : Next.js, TypeScript, Tailwind CSS."
         url="https://villa-albertine.org/fr/"
         imagePosition="right"
       >
@@ -95,24 +96,98 @@ import LinkedInLogo from "/public/linkedin.svg";
   </section>
 
   <footer
-    class="mt-24 py-8 px-6 mx-4 md:mx-12 text-center fade-in bg-surface rounded-t-4xl flex flex-col md:flex-row gap-16 justify-center"
+    class="mt-24 py-8 px-6 mx-4 md:mx-12 text-center fade-in bg-surface rounded-t-4xl flex flex-col items-center md:flex-row gap-16 justify-center"
   >
     <a
       href="https://github.com/RemJpn"
-      class="flex items-center gap-2 text-lg md:text-xl pl-1 hover:text-[#8D8DFF]"
+      class="flex items-center gap-2 text-lg md:text-xl pl-1 hover:text-[#8D8DFF] rounded-sm"
     >
       <GithubLogo />
       GitHub
     </a>
     <a
       href="https://www.linkedin.com/in/r%C3%A9mi-schwartz/"
-      class="flex items-center gap-2 text-lg md:text-xl pl-1 hover:text-[#8D8DFF]"
+      class="flex items-center gap-2 text-lg md:text-xl pl-1 hover:text-[#8D8DFF] rounded-sm"
       ><LinkedInLogo />LinkedIn</a
     >
     <a
       href="https://remjpn.github.io/profile/"
-      class="text-lg md:text-xl pl-1 hover:text-[#8D8DFF] sr-only focus:not-sr-only"
+      class="text-lg md:text-xl pl-1 hover:text-[#8D8DFF] sr-only focus:not-sr-only rounded-sm"
       target="_blank">Ancien Portfolio (2021)</a
     >
   </footer>
 </BaseLayout>
+
+<script>
+  // @ts-ignore
+  import KonamiCode from "konami-code-js";
+
+  new KonamiCode(() => {
+    const pipeImage = document.createElement("img");
+    pipeImage.src = "/profile/Mario-Pipe-PNG-Image-HD-300x225.png";
+    pipeImage.className = "mario-pipe";
+    pipeImage.style.top = "100px";
+
+    if (!document.querySelector(".mario-pipe")) {
+      document.body.appendChild(pipeImage);
+    }
+
+    let stopAnimation = false;
+
+    let pipeVx = 3;
+    let pipeX = -80;
+
+    const img = document.createElement("img");
+    img.src = "/profile/Mario-Mushroom-PNG-Image.png";
+    img.className = "mario-mushroom";
+    img.draggable = false;
+    document.body.appendChild(img);
+
+    img.addEventListener("click", function (e) {
+      img.remove();
+      stopAnimation = true;
+    });
+
+    // Physics parameters
+    let x = -100;
+    let y = 125;
+    let vx = 3; // horizontal drift
+    let vy = 0; // initial upward velocity
+    let gravity = 0.2;
+    let opacity = 1;
+
+    function animate() {
+      if (pipeX < -2 && y < window.innerHeight - 500) {
+        pipeX += pipeVx;
+        pipeImage.style.left = `${pipeX}px`;
+      }
+      if (y > window.innerHeight - 500) {
+        pipeX -= pipeVx;
+        pipeImage.style.left = `${pipeX}px`;
+      }
+      if (pipeX < -81) {
+        pipeImage.remove();
+      }
+
+      if ((y !== 125 && x < 0) || x > window.innerWidth - 90) {
+        vx = -vx;
+      }
+      x += vx;
+      if (x > 50 && y < window.innerHeight - 90) {
+        vy += gravity;
+        y += vy;
+      }
+      // opacity -= 0.0015;
+
+      img.style.top = `${y}px`;
+      img.style.left = `${x}px`;
+      img.style.opacity = opacity.toString();
+
+      if (!stopAnimation || pipeX > -81) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    requestAnimationFrame(animate);
+  });
+</script>
