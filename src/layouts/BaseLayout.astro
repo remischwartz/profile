@@ -35,7 +35,6 @@ import "../styles/global.css";
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            console.log(entries);
             const id = entry.target.getAttribute("id");
             const link = document.querySelector(`a[href='#${id}']`);
             if (entry.isIntersecting) {
