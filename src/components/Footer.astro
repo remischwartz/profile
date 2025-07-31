@@ -1,0 +1,33 @@
+---
+import GithubLogo from "../assets/github-mark.svg";
+import LinkedInLogo from "../assets/linkedin.svg";
+import { Stack } from "./Stack.tsx";
+---
+
+<footer
+  class="mt-24 py-8 px-6 mx-4 md:mx-12 text-center fade-in bg-surface rounded-t-4xl flex flex-col items-center md:flex-row gap-16 justify-center"
+>
+  <a
+    href="https://github.com/RemJpn"
+    target="_blank"
+    class="flex items-center gap-2 text-lg md:text-xl pl-1 hover:text-[#8D8DFF] rounded-sm"
+  >
+    <GithubLogo class="text-size-svg" />
+    GitHub
+  </a>
+  <a
+    href="https://www.linkedin.com/in/r%C3%A9mi-schwartz/"
+    target="_blank"
+    class="flex items-center gap-2 text-lg md:text-xl pl-1 hover:text-[#8D8DFF] rounded-sm"
+    ><LinkedInLogo class="text-size-svg" />LinkedIn</a
+  >
+
+  <Stack client:visible />
+
+  <a
+    href="https://remjpn.github.io/profile/"
+    target="_blank"
+    class="text-lg md:text-xl pl-1 hover:text-[#8D8DFF] sr-only focus:not-sr-only rounded-sm"
+    target="_blank">Ancien Portfolio (2021)</a
+  >
+</footer>
