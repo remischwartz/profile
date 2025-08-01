@@ -80,6 +80,7 @@ import Footer from "../components/Footer.astro";
     pipeImage.src = "/profile/Mario-Pipe-PNG-Image-HD-300x225.png";
     pipeImage.className = "mario-pipe";
     pipeImage.style.top = "100px";
+    pipeImage.alt = "";
 
     if (!document.querySelector(".mario-pipe")) {
       document.body.appendChild(pipeImage);
@@ -94,6 +95,7 @@ import Footer from "../components/Footer.astro";
     img.src = "/profile/Mario-Mushroom-PNG-Image.png";
     img.className = "mario-mushroom";
     img.draggable = false;
+    img.alt = "";
     document.body.appendChild(img);
 
     img.addEventListener("click", function (e) {
