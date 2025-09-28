@@ -1,0 +1,15 @@
+@reference "./global.css";
+
+h1 {
+  @apply text-2xl font-bold uppercase md:text-4xl;
+}
+h2 {
+  @apply mt-12 text-xl font-bold md:mt-16 md:text-2xl;
+}
+h3 {
+  @apply text-lg font-bold md:text-xl;
+}
+
+p {
+  @apply mt-4;
+}
