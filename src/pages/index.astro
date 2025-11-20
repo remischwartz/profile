@@ -8,70 +8,68 @@ import Skills from "../components/Skills.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<div id="profile">
-  <BaseLayout pageTitle="Rémi Schwartz | Portfolio">
-    <Hero />
-    <Skills />
+<BaseLayout pageTitle="Rémi Schwartz | Portfolio" pageId="profile">
+  <Hero />
+  <Skills />
 
-    <section id="about" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
-      <h2 class="text-center">À propos</h2>
-      <p class="text-center mt-16">
-        Après une première carrière dans l'aéronautique, je me suis reconverti
-        dans le développement web. Depuis 4 ans, je travaille comme développeur
-        frontend chez EY Fabernovel.
-      </p>
-      <p class="text-center mt-4">
-        <span class="font-bold">Mon objectif : </span>concevoir des interfaces
-        accessibles et maintenir des design systems fiables et cohérents.
-      </p>
-    </section>
+  <section id="about" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
+    <h2 class="text-center">À propos</h2>
+    <p class="text-center mt-16">
+      Après une première carrière dans l'aéronautique, je me suis reconverti
+      dans le développement web. Depuis 4 ans, je travaille comme développeur
+      frontend chez EY Fabernovel.
+    </p>
+    <p class="text-center mt-4">
+      <span class="font-bold">Mon objectif : </span>concevoir des interfaces
+      accessibles et maintenir des design systems fiables et cohérents.
+    </p>
+  </section>
 
-    <section id="projects" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
-      <h2 class="text-center">Projets récents</h2>
-      <ul class="mt-16 space-y-6 flex flex-col gap-12">
-        <PastProject
-          title="Design System de l\'Autonomie (2024 — aujourd\'hui)"
-          description="Composants Web accessibles pour la CNSA, destinés aux personnes âgées ou en situation de handicap. Respect des normes WCAG et RGAA."
-          url="https://dsa.service-public-autonomie.fr/"
-        >
-          <ScreenPreview filename="DSA" />
-        </PastProject>
-        <PastProject
-          title="NAOS – Skin Observer (2023)"
-          description="Outil d'analyse de peau intégré via iframe sur les sites des différentes marques de NAOS. Stack : Next.js, TypeScript, Tailwind, Haut.AI."
-          url="https://front-naosko-prod.naos.com/fr-FR?parent=https://www.esthederm.fr&brand=Institut%20Esthederm&legalNotice=https://www.esthederm.fr/charte-de-protection-des-donnees-personnelles&pricingUrl=https://back-prod.esthederm.com/graphql"
-          imagePosition="right"
-        >
-          <ScreenPreview filename="SkinObserver" />
-        </PastProject>
-        <PastProject
-          title="Flowee – Plateforme de travail hybride (2022)"
-          description="Dashboard React pour la gestion du flex office. Utilisation de React Aria pour améliorer l'accessibilité et l'expérience utilisateur."
-          url="https://www.flowee.io/"
-        >
-          <ScreenPreview filename="Flowee" />
-        </PastProject>
-        <PastProject
-          title="Site web de la Villa Albertine (2021)"
-          description="Développement frontend du site culturel de l'ambassade de France aux États-Unis. Stack : Next.js, TypeScript, Tailwind CSS."
-          url="https://villa-albertine.org/fr/"
-          imagePosition="right"
-        >
-          <ScreenPreview filename="VillaAlbertine" />
-        </PastProject>
-      </ul>
-    </section>
+  <section id="projects" class="pt-24 pb-8 px-6 max-w-4xl mx-auto fade-in">
+    <h2 class="text-center">Projets récents</h2>
+    <ul class="mt-16 space-y-6 flex flex-col gap-12">
+      <PastProject
+        title="Design System de l\'Autonomie (2024 — aujourd\'hui)"
+        description="Composants Web accessibles pour la CNSA, destinés aux personnes âgées ou en situation de handicap. Respect des normes WCAG et RGAA."
+        url="https://dsa.service-public-autonomie.fr/"
+      >
+        <ScreenPreview filename="DSA" />
+      </PastProject>
+      <PastProject
+        title="NAOS – Skin Observer (2023)"
+        description="Outil d'analyse de peau intégré via iframe sur les sites des différentes marques de NAOS. Stack : Next.js, TypeScript, Tailwind, Haut.AI."
+        url="https://front-naosko-prod.naos.com/fr-FR?parent=https://www.esthederm.fr&brand=Institut%20Esthederm&legalNotice=https://www.esthederm.fr/charte-de-protection-des-donnees-personnelles&pricingUrl=https://back-prod.esthederm.com/graphql"
+        imagePosition="right"
+      >
+        <ScreenPreview filename="SkinObserver" />
+      </PastProject>
+      <PastProject
+        title="Flowee – Plateforme de travail hybride (2022)"
+        description="Dashboard React pour la gestion du flex office. Utilisation de React Aria pour améliorer l'accessibilité et l'expérience utilisateur."
+        url="https://www.flowee.io/"
+      >
+        <ScreenPreview filename="Flowee" />
+      </PastProject>
+      <PastProject
+        title="Site web de la Villa Albertine (2021)"
+        description="Développement frontend du site culturel de l'ambassade de France aux États-Unis. Stack : Next.js, TypeScript, Tailwind CSS."
+        url="https://villa-albertine.org/fr/"
+        imagePosition="right"
+      >
+        <ScreenPreview filename="VillaAlbertine" />
+      </PastProject>
+    </ul>
+  </section>
 
-    <section
-      id="contact"
-      class="py-24 px-6 max-w-4xl mx-auto text-center fade-in"
-    >
-      <ContactLink />
-    </section>
+  <section
+    id="contact"
+    class="py-24 px-6 max-w-4xl mx-auto text-center fade-in"
+  >
+    <ContactLink />
+  </section>
 
-    <Footer />
-  </BaseLayout>
-</div>
+  <Footer />
+</BaseLayout>
 
 <script>
   // @ts-ignore

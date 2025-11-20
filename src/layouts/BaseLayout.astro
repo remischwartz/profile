@@ -3,7 +3,7 @@ import ContactLink from "../components/ContactLink.astro";
 import Navbar from "../components/Navbar.astro";
 import NavbarItem from "../components/NavbarItem.astro";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+const { pageTitle, pageId } = Astro.props;
 ---
 
 <!doctype html>
@@ -50,7 +50,7 @@ const { pageTitle } = Astro.props;
       content="https://remischwartz.github.io/profile/code.png"
     />
   </head>
-  <body class="bg-background text-sand-200 font-sans scroll-smooth">
+  <body class="bg-background text-sand-200 font-sans scroll-smooth" id={pageId}>
     <Navbar>
       <NavbarItem content="Accueil" href=`${import.meta.env.BASE_URL}#top` />
       <NavbarItem
