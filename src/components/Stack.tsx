@@ -15,7 +15,7 @@ export const Stack = () => {
         onClick={() => setIsOpen(true)}
         aria-expanded={isOpen}
         aria-controls="stackDialog"
-        className="rounded-sm px-4 text-lg outline-offset-[-2px]! text-shadow-lg md:text-xl"
+        className="rounded-sm px-4 text-lg outline-offset-[-2px]! text-shadow-lg hover:text-[#8D8DFF] md:text-xl"
       >
         Stack 🛠️
       </button>
