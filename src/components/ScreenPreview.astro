@@ -1,6 +1,11 @@
 ---
 interface Props {
-  filename: "SkinObserver" | "DSA" | "VillaAlbertine" | "Flowee";
+  filename:
+    | "SkinObserver"
+    | "DSA"
+    | "VillaAlbertine"
+    | "Flowee"
+    | "SakuraGarden";
 }
 
 const { filename } = Astro.props;
@@ -8,6 +13,11 @@ let backgroundClass;
 let backgroundHoverClass;
 
 switch (filename) {
+  case "SakuraGarden":
+    backgroundClass = "bg-[url('/profile/projects/SakuraGarden.png')]";
+    backgroundHoverClass =
+      "group-hover:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('/profile/projects/SakuraGarden.png')]";
+    break;
   case "DSA":
     backgroundClass = "bg-[url('/profile/projects/DSA.png')]";
     backgroundHoverClass =
